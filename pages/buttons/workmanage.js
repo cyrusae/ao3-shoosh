@@ -7,3 +7,11 @@ class WorkHide extends Component {
 
  }
 }
+
+export function WorkInfo() {
+ return (
+  <>
+   Test of WorkInfo
+  </>
+ )
+}
