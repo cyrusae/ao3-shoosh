@@ -6,6 +6,7 @@ import { UseSelect } from './buttons/hidemute'
 import Script from 'next/script'
 import { Button, ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import { WorkInfo } from './buttons/workmanage'
+import WorkHide from './buttons/workmanage'
 
 
 class Home extends Component {
@@ -39,10 +40,10 @@ class Home extends Component {
 // chooseUseCase(usecase) {
 //  switch (usecase) {
    case 'useWork':
-    this.setState({ useWork: true, useUser: false });
+    this.setState({ useWork: true, useUser: false, useOutcome: true });
     break;
    case 'useUser':
-    this.setState({ useUser: true, useWork: false });
+    this.setState({ useUser: true, useWork: false, useOutcome: true });
     break;
    case 'useOutcome':
     this.setState({ useOutcome: true, useUser: this.state.useUser, useWork: this.state.useWork })
@@ -87,14 +88,14 @@ class Home extends Component {
 
 
    <ToggleButtonGroup type='radio' size='lg' name='useWhich'>
-     <ToggleButton id='hideWork' value={1} onClick={ () => this.chooseHints('useWork')}>Hide a Work</ToggleButton>
-     <ToggleButton id='muteUser' value={2} onClick={ () => this.chooseHints('useUser')}>Mute a User</ToggleButton>
+     <ToggleButton id='hideWork' variant='outline-primary' value={1} onClick={ () => this.chooseHints('useWork')}>Hide a Work</ToggleButton>
+     <ToggleButton id='muteUser' variant='outline-success' value={2} onClick={ () => this.chooseHints('useUser')}>Mute a User</ToggleButton>
    </ToggleButtonGroup>  
 
    <div className={styles.container}>
    {useWork && <div>
-    Placeholder text showing useWork is active.
-    <WorkInfo />
+    <p>Placeholder text showing useWork is active.</p>
+    <input type='text' ref='fic'></input>  
    </div>}
 
    {useUser && <div>
@@ -104,6 +105,11 @@ class Home extends Component {
 
    <div className={styles.container}>
     {useOutcome && <div>
+     <Button type='submit' variant='outline-dark' size='sm' value='Generate' onClick={() => {
+     }}>Generate CSS</Button>
+     <div>
+      <textarea id='output' disabled></textarea>
+     </div>
      Placeholder demonstrating where you put an outcome.
     </div>}
    </div>
