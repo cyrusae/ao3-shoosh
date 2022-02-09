@@ -15,5 +15,6 @@ Interface for generating the CSS you need to mute a user or hide a work from you
 
 - [ ] Add detailed README
 - [ ] Add AO3.js (pending release)
-- [ ] Frontend skeleton 
-- [ ] Proof of concept: "hide work" process (can be all client-side)
+- [x] Frontend skeleton 
+- [ ] More meat on frontend skeleton
+- [ ] Proof of concept: "hide work" process (does not require AO3.js)
