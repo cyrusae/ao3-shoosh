@@ -76,7 +76,7 @@ class Home extends Component {
    <Button variant='outline-secondary' size='sm' onClick={ () => this.chooseHints('showDisclaim')}>Click to show disclaimer message</Button>
   )}
      { showDisclaim || (
-      <><p>Note: Archive of Our Own does not currently have a true <em>block</em> function. What this tool can do is create CSS for you to paste into a skin on your account <b><em>TO DO: ADD LINK TO WHAT THIS MEANS</em></b>, which will prevent specific works - or users - from being displayed while you're logged in.
+      <><p>Note: Archive of Our Own does not currently have a true <em>block</em> function. What this tool can do is create CSS for you to paste into <a href='https://archiveofourown.org/faq/skins-and-archive-interface?language_id=en#createsiteskin'>a skin on your account</a>, which will prevent specific works - or users - from being displayed while you're logged in.
       </p>
   <Button variant='outline-secondary' size='sm' onClick={ () => this.chooseHints('showDisclaim')}>Click to dismiss this message</Button></>
   )}
