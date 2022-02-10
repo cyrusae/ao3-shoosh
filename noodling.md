@@ -14,7 +14,7 @@ export default TheCSS;
 Thinking about needs...
 
 - UserVerify generates the "this mutes {user}, also known by the pseuds {pseuds}." text
-- Only generate verify/display pseuds if the pseuds array's length is greater than 1 
+- Only generate verify/display pseuds if the pseuds array's length is greater than 1 (QOL improvement, can live without at first if not easy)
 - Would a hasPseuds boolean be useful or overkill versus checking manually on generation?
 - Would like to make it a single export that changes content entirely based on what's being muted/hidden...
 
